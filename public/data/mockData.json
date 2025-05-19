@@ -1,0 +1,180 @@
+{
+  "revenue": [
+    { "month": "2024-01-01", "amount": 12000 },
+    { "month": "2024-02-01", "amount": 15000 },
+    { "month": "2024-03-01", "amount": 14000 },
+    { "month": "2024-04-01", "amount": 17000 },
+    { "month": "2024-05-01", "amount": 16000 },
+    { "month": "2024-06-01", "amount": 18000 },
+    { "month": "2024-07-01", "amount": 13500 },
+    { "month": "2024-08-01", "amount": 19000 },
+    { "month": "2024-09-01", "amount": 20000 },
+    { "month": "2024-10-01", "amount": 18000 },
+    { "month": "2024-11-01", "amount": 20500 },
+    { "month": "2024-12-01", "amount": 22000 },
+    { "month": "2025-01-01", "amount": 21100 },
+    { "month": "2025-02-01", "amount": 23000 },
+    { "month": "2025-03-01", "amount": 20500 },
+    { "month": "2025-04-01", "amount": 18000 },
+    { "month": "2025-05-01", "amount": 24500 }
+  ],
+  "expenses": [
+  { "category": "Salaries", "amount": 8000, "date": "2024-01-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-01-01" },
+  { "category": "Utilities", "amount": 1000, "date": "2024-01-01" },
+  { "category": "Marketing", "amount": 1500, "date": "2024-01-01" },
+
+  { "category": "Salaries", "amount": 8100, "date": "2024-02-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-02-01" },
+  { "category": "Utilities", "amount": 1100, "date": "2024-02-01" },
+  { "category": "Marketing", "amount": 1600, "date": "2024-02-01" },
+
+  { "category": "Salaries", "amount": 8200, "date": "2024-03-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-03-01" },
+  { "category": "Utilities", "amount": 1050, "date": "2024-03-01" },
+  { "category": "Marketing", "amount": 1700, "date": "2024-03-01" },
+
+  { "category": "Salaries", "amount": 8250, "date": "2024-04-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-04-01" },
+  { "category": "Utilities", "amount": 1025, "date": "2024-04-01" },
+  { "category": "Marketing", "amount": 1650, "date": "2024-04-01" },
+
+  { "category": "Salaries", "amount": 8200, "date": "2024-05-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-05-01" },
+  { "category": "Utilities", "amount": 1050, "date": "2024-05-01" },
+  { "category": "Marketing", "amount": 1700, "date": "2024-05-01" },
+
+  { "category": "Salaries", "amount": 8250, "date": "2024-06-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-06-01" },
+  { "category": "Utilities", "amount": 1025, "date": "2024-06-01" },
+  { "category": "Marketing", "amount": 1650, "date": "2024-06-01" },
+
+  { "category": "Salaries", "amount": 8000, "date": "2024-07-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-07-01" },
+  { "category": "Utilities", "amount": 1000, "date": "2024-07-01" },
+  { "category": "Marketing", "amount": 1500, "date": "2024-07-01" },
+
+  { "category": "Salaries", "amount": 8100, "date": "2024-08-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-08-01" },
+  { "category": "Utilities", "amount": 1100, "date": "2024-08-01" },
+  { "category": "Marketing", "amount": 1600, "date": "2024-08-01" },
+
+  { "category": "Salaries", "amount": 8200, "date": "2024-09-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-09-01" },
+  { "category": "Utilities", "amount": 1050, "date": "2024-09-01" },
+  { "category": "Marketing", "amount": 1700, "date": "2024-09-01" },
+
+  { "category": "Salaries", "amount": 8250, "date": "2024-10-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-10-01" },
+  { "category": "Utilities", "amount": 1025, "date": "2024-10-01" },
+  { "category": "Marketing", "amount": 1650, "date": "2024-10-01" },
+
+  { "category": "Salaries", "amount": 8200, "date": "2024-11-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-11-01" },
+  { "category": "Utilities", "amount": 1050, "date": "2024-11-01" },
+  { "category": "Marketing", "amount": 1700, "date": "2024-11-01" },
+
+  { "category": "Salaries", "amount": 8250, "date": "2024-12-01" },
+  { "category": "Rent", "amount": 2000, "date": "2024-12-01" },
+  { "category": "Utilities", "amount": 1025, "date": "2024-12-01" },
+  { "category": "Marketing", "amount": 1650, "date": "2024-12-01" },
+
+  { "category": "Salaries", "amount": 8000, "date": "2025-01-01" },
+  { "category": "Rent", "amount": 2000, "date": "2025-01-01" },
+  { "category": "Utilities", "amount": 1000, "date": "2025-01-01" },
+  { "category": "Marketing", "amount": 1500, "date": "2025-01-01" },
+
+  { "category": "Salaries", "amount": 8100, "date": "2025-02-01" },
+  { "category": "Rent", "amount": 2000, "date": "2025-02-01" },
+  { "category": "Utilities", "amount": 1100, "date": "2025-02-01" },
+  { "category": "Marketing", "amount": 1600, "date": "2025-02-01" },
+
+  { "category": "Salaries", "amount": 8200, "date": "2025-03-01" },
+  { "category": "Rent", "amount": 2000, "date": "2025-03-01" },
+  { "category": "Utilities", "amount": 1050, "date": "2025-03-01" },
+  { "category": "Marketing", "amount": 1700, "date": "2025-03-01" },
+
+  { "category": "Salaries", "amount": 8250, "date": "2025-04-01" },
+  { "category": "Rent", "amount": 2000, "date": "2025-04-01" },
+  { "category": "Utilities", "amount": 1025, "date": "2025-04-01" },
+  { "category": "Marketing", "amount": 1650, "date": "2025-04-01" },
+
+  { "category": "Salaries", "amount": 8200, "date": "2025-05-01" },
+  { "category": "Rent", "amount": 2000, "date": "2025-05-01" },
+  { "category": "Utilities", "amount": 1050, "date": "2025-05-01" },
+  { "category": "Marketing", "amount": 1700, "date": "2025-05-01" }
+
+],
+
+"profitMargins": [
+  { "department": "Sales", "margin": 35, "date": "2024-01-01" },
+  { "department": "HR", "margin": 25, "date": "2024-01-01" },
+  { "department": "Tech", "margin": 40, "date": "2024-01-01" },
+
+  { "department": "Sales", "margin": 38, "date": "2024-02-01" },
+  { "department": "HR", "margin": 26, "date": "2024-02-01" },
+  { "department": "Tech", "margin": 42, "date": "2024-02-01" },
+
+  { "department": "Sales", "margin": 36, "date": "2024-03-01" },
+  { "department": "HR", "margin": 24, "date": "2024-03-01" },
+  { "department": "Tech", "margin": 43, "date": "2024-03-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2024-04-01" },
+  { "department": "HR", "margin": 27, "date": "2024-04-01" },
+  { "department": "Tech", "margin": 41, "date": "2024-04-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2024-05-01" },
+  { "department": "HR", "margin": 27, "date": "2024-05-01" },
+  { "department": "Tech", "margin": 41, "date": "2024-05-01" },
+
+
+  { "department": "Sales", "margin": 35, "date": "2024-06-01" },
+  { "department": "HR", "margin": 25, "date": "2024-06-01" },
+  { "department": "Tech", "margin": 40, "date": "2024-06-01" },
+
+  { "department": "Sales", "margin": 38, "date": "2024-07-01" },
+  { "department": "HR", "margin": 26, "date": "2024-07-01" },
+  { "department": "Tech", "margin": 42, "date": "2024-07-01" },
+
+  { "department": "Sales", "margin": 36, "date": "2024-08-01" },
+  { "department": "HR", "margin": 24, "date": "2024-08-01" },
+  { "department": "Tech", "margin": 43, "date": "2024-08-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2024-09-01" },
+  { "department": "HR", "margin": 27, "date": "2024-09-01" },
+  { "department": "Tech", "margin": 41, "date": "2024-09-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2024-10-01" },
+  { "department": "HR", "margin": 27, "date": "2024-10-01" },
+  { "department": "Tech", "margin": 41, "date": "2024-10-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2024-11-01" },
+  { "department": "HR", "margin": 27, "date": "2024-11-01" },
+  { "department": "Tech", "margin": 41, "date": "2024-11-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2024-12-01" },
+  { "department": "HR", "margin": 27, "date": "2024-12-01" },
+  { "department": "Tech", "margin": 41, "date": "2024-12-01" },
+
+  { "department": "Sales", "margin": 35, "date": "2025-01-01" },
+  { "department": "HR", "margin": 25, "date": "2025-01-01" },
+  { "department": "Tech", "margin": 40, "date": "2025-01-01" },
+
+  { "department": "Sales", "margin": 38, "date": "2025-02-01" },
+  { "department": "HR", "margin": 26, "date": "2025-02-01" },
+  { "department": "Tech", "margin": 42, "date": "2025-02-01" },
+
+  { "department": "Sales", "margin": 36, "date": "2025-03-01" },
+  { "department": "HR", "margin": 24, "date": "2025-03-01" },
+  { "department": "Tech", "margin": 43, "date": "2025-03-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2025-04-01" },
+  { "department": "HR", "margin": 27, "date": "2025-04-01" },
+  { "department": "Tech", "margin": 41, "date": "2025-04-01" },
+
+  { "department": "Sales", "margin": 37, "date": "2025-05-01" },
+  { "department": "HR", "margin": 27, "date": "2025-05-01" },
+  { "department": "Tech", "margin": 41, "date": "2025-05-01" }
+]
+
+}
