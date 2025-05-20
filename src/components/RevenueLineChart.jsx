@@ -1,5 +1,5 @@
 
-import React from "react";
+import {React, memo} from "react";
 import {
   LineChart,
   Line,
@@ -10,7 +10,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const RevenueLineChart = ({ revenue, filters }) => {
+const RevenueLineChart = memo(({ revenue, filters }) => {
   const filtered = revenue.filter((r) => {
     const monthDate = new Date(r.month);
     const start = filters.startDate ? new Date(filters.startDate) : null;
@@ -40,6 +40,6 @@ const RevenueLineChart = ({ revenue, filters }) => {
       </ResponsiveContainer>
     </div>
   );
-};
+});
 
 export default RevenueLineChart;

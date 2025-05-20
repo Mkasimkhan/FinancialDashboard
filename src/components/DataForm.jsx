@@ -1,39 +1,3 @@
-// import React, { useState } from 'react';
-
-// const DataForm = ({ data, setData }) => {
-//   const [revenue, setRevenue] = useState({ month: '', amount: '' });
-//   const [expense, setExpense] = useState({ category: '', amount: '' });
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     setData(prev => ({
-//       ...prev,
-//       revenue: [...prev.revenue, revenue],
-//       expenses: {
-//         ...prev.expenses,
-//         [expense.category]: (prev.expenses[expense.category] || 0) + Number(expense.amount)
-//       }
-//     }));
-//   };
-
-//   return (
-//     <form onSubmit={handleSubmit} className="form">
-//       <h2>Add Data</h2>
-//       <input
-//         type="month"
-//         onChange={e => setRevenue({ ...revenue, month: `${e.target.value}-01` })}
-//         required
-//       />
-//       <input placeholder="Amount" type="number" onChange={e => setRevenue({ ...revenue, amount: Number(e.target.value) })} required />
-//       <input placeholder="Category" onChange={e => setExpense({ ...expense, category: e.target.value })} required />
-//       <input placeholder="Expense Amount" type="number" onChange={e => setExpense({ ...expense, amount: Number(e.target.value) })} required />
-//       <button type="submit">Add</button>
-//     </form>
-//   );
-// };
-
-// export default DataForm;
-
 import React, { useState } from 'react';
 
 const DataForm = ({ data, setData }) => {
@@ -49,7 +13,7 @@ const DataForm = ({ data, setData }) => {
 
       let updatedRevenue;
       if (existingIndex !== -1) {
-        // Update existing revenue amount
+        // Update existing revenue
         updatedRevenue = [...data.revenue];
         updatedRevenue[existingIndex].amount = Number(revenue.amount);
       } else {
@@ -61,19 +25,20 @@ const DataForm = ({ data, setData }) => {
         ...prev,
         revenue: updatedRevenue
       }));
+    }
 
-    } else if (type === 'expense') {
+    if (type === 'expense') {
       const existingIndex = data.expenses.findIndex(
         item => item.category === expense.category && item.date === expense.date
       );
 
       let updatedExpenses;
       if (existingIndex !== -1) {
-        // Update existing expense amount
+        // Update existing expense
         updatedExpenses = [...data.expenses];
         updatedExpenses[existingIndex].amount = Number(expense.amount);
       } else {
-        // Add new expense entry
+        // Add new expense
         updatedExpenses = [...data.expenses, { ...expense, amount: Number(expense.amount) }];
       }
 
@@ -83,7 +48,7 @@ const DataForm = ({ data, setData }) => {
       }));
     }
 
-    // Clear form
+    // Reset fields
     setRevenue({ month: '', amount: '' });
     setExpense({ category: '', amount: '', date: '' });
   };

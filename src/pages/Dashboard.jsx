@@ -16,7 +16,9 @@ const Dashboard = () => {
     startDate: "",
     endDate: "",
   });
-
+  useEffect(() => {
+    console.log("Data updated:", data);
+  }, [data]);
   useEffect(() => {
     const currentYear = new Date().getFullYear();
     const startOfYear = `${currentYear}-01-01`;
