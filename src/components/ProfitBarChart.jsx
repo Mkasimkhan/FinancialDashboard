@@ -35,7 +35,7 @@ const ProfitBarChart = ({ profits, filters }) => {
       <YAxis />
       <Tooltip />
       <Legend />
-      <Bar dataKey="avgMargin" fill="#82ca9d" />
+      <Bar dataKey="avgMargin" fill="#8884d8" />
     </BarChart>
     </ResponsiveContainer>
     </div>

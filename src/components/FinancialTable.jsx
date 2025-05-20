@@ -129,7 +129,7 @@ const FinancialTable = ({ data, filters }) => {
 
   return (
     <Box sx={{ height: 400, width: '100%', mt: 4 }}>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom sx={{ color: '#8884d8' }}>
         Average Profit Margin Table
       </Typography>
       {loading ? (

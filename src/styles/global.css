@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8f9fa;
@@ -162,6 +162,224 @@ tr:hover td {
   .row2 .chart-card {
     width: 100%;
     margin-right: 0; 
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+.loader-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid #eee;
+  border-top: 8px solid #8884d8;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+.navbar {
+  background-color: #343a40;
+  color: #8884d8;
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rowcont {
+  display: flex;
+  flex-direction: column;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.row2 {
+  display: flex;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.row2 .chart-card {
+  width: 50%;
+  animation: fadeIn 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  transition: box-shadow 0.3s ease;
+}
+
+.row2 .chart-card:hover {
+  box-shadow: 0 8px 20px rgba(136, 132, 216, 0.5);
+  transform: translateY(-5px);
+}
+
+.chart-card, .form, .filters, .table-section {
+  margin: 1rem 0;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.chart-card h2{
+  color: #8884d8;
+}
+.chart-card:hover,
+.form:hover,
+.filters:hover,
+.table-section:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+form input,
+form select,
+form button,
+.filters input,
+.filters select {
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  appearance: none;
+  /* background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%238884d8' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; */
+  background-position: right 0.75rem center;
+  background-size: 0.65em auto;
+  cursor: pointer;
+}
+
+form input:focus,
+form select:focus,
+.filters input:focus,
+.filters select:focus {
+  border-color: #8884d8;
+  box-shadow: 0 0 8px rgba(136, 132, 216, 0.4);
+  outline: none;
+}
+
+form button {
+  background-color: #8884d8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #6b5bbd;
+}
+.form h2{
+  color: #8884d8;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+th {
+  cursor: pointer;
+  background-color: #f1f1f1;
+  user-select: none;
+}
+
+th:hover {
+  background-color: #e0e0f8;
+}
+
+tr:hover td {
+  background-color: #f9f9ff;
+}
+
+@media (max-width: 800px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    overflow-x: hidden;
+  }
+
+  .row2 {
+    flex-direction: column;
+  }
+
+  .row2 .chart-card {
+    width: 100%;
+    margin-right: 0;
   }
 }
 

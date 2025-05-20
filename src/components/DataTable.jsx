@@ -130,8 +130,8 @@ const DataTable = ({ data, filters }) => {
     }));
 
   return (
-    <Box sx={{ width: "100%", mt: 10 }}>
-      <Typography variant="h5" sx={{ mb: 2 }}>
+    <Box sx={{ width: "100%", mt: 10, height: 500, mb:20 }}>
+      <Typography variant="h5" sx={{ mb: 2, color: '#8884d8' }}>
         Sortable & Filterable Data Table
       </Typography>
 
@@ -145,10 +145,10 @@ const DataTable = ({ data, filters }) => {
         <DataGrid
           rows={revenueRows}
           columns={revenueColumns}
-          autoHeight
           pageSize={5}
           rowsPerPageOptions={[5, 10]}
           sx={{
+            height: 500,
             boxShadow: 1,
             border: 1,
             borderColor: 'divider',
@@ -167,16 +167,21 @@ const DataTable = ({ data, filters }) => {
         <DataGrid
           rows={expenseRows}
           columns={expenseColumns}
-          autoHeight
+          
           pageSize={5}
           rowsPerPageOptions={[5, 10]}
+          
           sx={{
+            height: 500,
             boxShadow: 1,
             border: 1,
             borderColor: 'divider',
             '& .MuiDataGrid-columnHeader': {
               backgroundColor: '#343a40',
               color: 'white'
+            },
+            '& .MuiDataGrid-scrollbarFiller--header':{
+                backgroundColor: '#343a40',
             },
             '& .MuiDataGrid-cell:hover': {
               color: 'primary.main',
@@ -189,16 +194,21 @@ const DataTable = ({ data, filters }) => {
         <DataGrid
           rows={marginRows}
           columns={marginColumns}
-          autoHeight
+          
           pageSize={5}
           rowsPerPageOptions={[5, 10]}
           sx={{
+            height: 500,
+            overflow: 'auto',
             boxShadow: 1,
             border: 1,
             borderColor: 'divider',
             '& .MuiDataGrid-columnHeader': {
               backgroundColor: '#343a40',
               color: 'white'
+            },
+            '& .MuiDataGrid-scrollbarFiller--header':{
+                backgroundColor: '#343a40',
             },
             '& .MuiDataGrid-cell:hover': {
               color: 'primary.main',
