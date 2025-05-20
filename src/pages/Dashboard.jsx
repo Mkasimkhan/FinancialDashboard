@@ -7,6 +7,7 @@ import FinancialTable from "../components/FinancialTable";
 import Filters from "../components/Filters";
 import DataForm from "../components/DataForm";
 import { fetchMockData } from "../services/mockApi";
+import DataTable from "../components/DataTable";
 
 const Dashboard = () => {
   const [data, setData] = useState(null);
@@ -45,6 +46,7 @@ const Dashboard = () => {
           </div>
         </div>
         <FinancialTable data={data} filters={filters} />
+        <DataTable data={data} filters={filters}/>
       </div>
     </>
   );
