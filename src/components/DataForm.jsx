@@ -1,51 +1,58 @@
 import React, { useState } from "react";
 
+// DataForm component to add or update revenue and expense data
 const DataForm = ({ data, setData }) => {
-  const [type, setType] = useState("revenue"); // 'revenue' or 'expense'
+  // State to toggle between 'revenue' or 'expense' form types
+  const [type, setType] = useState("revenue");
 
-  // Default to current month for revenue
+  // State for revenue input fields, default month is current month
   const [revenue, setRevenue] = useState({
-    month: new Date().toISOString().slice(0, 7),
+    month: new Date().toISOString().slice(0, 7), // format: YYYY-MM
     amount: ""
   });
 
+  // State for expense input fields
   const [expense, setExpense] = useState({
     category: "",
     amount: "",
     date: ""
   });
 
+  // Submit handler for the form
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (type === "revenue") {
+      // Check if the revenue for the selected month already exists
       const existingIndex = data.revenue.findIndex(
         (item) => item.month === revenue.month
       );
 
       let updatedRevenue;
       if (existingIndex !== -1) {
-        // Update existing revenue
+        // If found, update the existing amount
         updatedRevenue = [...data.revenue];
         updatedRevenue[existingIndex].amount = Number(revenue.amount);
       } else {
-        // Add new revenue entry
+        // If not found, add a new revenue entry
         updatedRevenue = [
           ...data.revenue,
           { ...revenue, amount: Number(revenue.amount) }
         ];
       }
 
+      // Update the data with new revenue array
       setData((prev) => ({
         ...prev,
         revenue: updatedRevenue
       }));
 
-      // Reset revenue form
+      // Reset revenue form fields
       setRevenue({ month: new Date().toISOString().slice(0, 7), amount: "" });
     }
 
     if (type === "expense") {
+      // Check if the expense for the same category and date exists
       const existingIndex = data.expenses.findIndex(
         (item) =>
           item.category === expense.category && item.date === expense.date
@@ -53,23 +60,24 @@ const DataForm = ({ data, setData }) => {
 
       let updatedExpenses;
       if (existingIndex !== -1) {
-        // Update existing expense
+        // If found, update the existing amount
         updatedExpenses = [...data.expenses];
         updatedExpenses[existingIndex].amount = Number(expense.amount);
       } else {
-        // Add new expense
+        // If not found, add a new expense entry
         updatedExpenses = [
           ...data.expenses,
           { ...expense, amount: Number(expense.amount) }
         ];
       }
 
+      // Update the data with new expenses array
       setData((prev) => ({
         ...prev,
         expenses: updatedExpenses
       }));
 
-      // Reset expense form
+      // Reset expense form fields
       setExpense({ category: "", amount: "", date: "" });
     }
   };
@@ -78,11 +86,13 @@ const DataForm = ({ data, setData }) => {
     <form onSubmit={handleSubmit} className="form">
       <h2>Add or Update Data</h2>
 
+      {/* Dropdown to select between Revenue and Expense */}
       <select value={type} onChange={(e) => setType(e.target.value)} required>
         <option value="revenue">Revenue</option>
         <option value="expense">Expense</option>
       </select>
 
+      {/* Revenue input form */}
       {type === "revenue" && (
         <>
           <input
@@ -103,6 +113,7 @@ const DataForm = ({ data, setData }) => {
         </>
       )}
 
+      {/* Expense input form */}
       {type === "expense" && (
         <>
           <input
@@ -129,6 +140,7 @@ const DataForm = ({ data, setData }) => {
         </>
       )}
 
+      {/* Submit button */}
       <button type="submit">Submit</button>
     </form>
   );
