@@ -30,7 +30,7 @@ const Dashboard = () => {
     });
   }, []);
 
-  if (!data) return <p>Loading...</p>;
+  if (!data) return null;
 
   return (
     <>
